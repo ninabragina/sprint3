@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    private var resalt = 0
+    @IBOutlet weak var refreshLabel: UILabel!
+    @IBAction func touchButton(_ sender: UIButton) {
+        resalt += 1
+        refreshLabel.text = "\(resalt)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        refreshLabel.text = "\(resalt)"
     }
 
 
